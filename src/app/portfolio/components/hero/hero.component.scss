@@ -1,0 +1,23 @@
+.hero-bg {
+  background-image: url("/assets/img/hero-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+}
+
+.levitate {
+  pointer-events: none;
+  animation: levitate 7s ease-in-out infinite;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translate(-50%, -85%);
+  }
+  50% {
+    transform: translate(-50%, -140%);
+  }
+  100% {
+    transform: translate(-50%, -85%);
+  }
+}
