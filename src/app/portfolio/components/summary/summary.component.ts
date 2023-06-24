@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-summary',
@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class SummaryComponent {
 
+  @ViewChild('summary') summary: ElementRef;
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    });
+
+    observer.observe(this.summary.nativeElement);
+  }
 }

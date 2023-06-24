@@ -1,0 +1,26 @@
+.photo {
+  width: 8rem;
+  height: 8rem;
+  background-image: url("/assets/img/MinhaFoto.jpg");
+  background-size: cover;
+  background-position: 0 -2.6rem;
+}
+
+.container {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4rem;
+  border: 4px solid #10B981FF;
+  background-color: #f1f3f5;
+  overflow: hidden;
+  position: absolute;
+  top: 2rem;
+  z-index: 10;
+  transition: .5s ease;
+}
+
+.container:hover {
+  width: 45rem;
+  border-radius: .25rem;
+  box-shadow: 0 0.5rem 3rem rgba(16, 185, 129, 0.56);
+}
