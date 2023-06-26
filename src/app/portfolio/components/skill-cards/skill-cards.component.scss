@@ -1,0 +1,28 @@
+.card-animation {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  transition: .7s ease-out;
+}
+
+.card-animation:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.card-animation:nth-child(3) {
+  transition-delay: 0.30s;
+}
+
+.card-animation:nth-child(4) {
+  transition-delay: 0.45s;
+}
+
+.card-animation:nth-child(5) {
+  transition-delay: 0.60s;
+}
+
+@media(prefers-reduced-motion) {
+  .card-animation {
+    transition: none;
+  }
+}

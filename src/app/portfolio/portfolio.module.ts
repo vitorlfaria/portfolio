@@ -5,6 +5,8 @@ import {PortfolioRoutingModule} from "./portfolio-routing.module";
 import {HeroComponent} from './components/hero/hero.component';
 import {SummaryComponent} from './components/summary/summary.component';
 import {SharedModule} from "../shared/shared.module";
+import { SkillCardsComponent } from './components/skill-cards/skill-cards.component';
+import { CommitSnakeComponent } from './components/commit-snake/commit-snake.component';
 
 
 @NgModule({
@@ -12,6 +14,8 @@ import {SharedModule} from "../shared/shared.module";
     HomeComponent,
     HeroComponent,
     SummaryComponent,
+    SkillCardsComponent,
+    CommitSnakeComponent,
   ],
   imports: [
     CommonModule,

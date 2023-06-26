@@ -1,0 +1,9 @@
+<div class="px-48 py-48 ">
+  <h1 class="heading pb-10 text-center">Top Skills</h1>
+  <div class="flex items-center justify-between">
+    <div *ngFor="let skill of skills"
+         class="w-[15rem] h-[10rem] flex items-center justify-center bg-slate-800 rounded-xl bg-opacity-70 text-2xl card opacity-0 blur-sm -translate-x-1/2">
+      {{skill}}
+    </div>
+  </div>
+</div>
