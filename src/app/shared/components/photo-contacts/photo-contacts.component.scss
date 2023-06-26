@@ -17,10 +17,14 @@
   top: 2rem;
   z-index: 10;
   transition: .5s ease;
-}
 
-.container:hover {
-  width: 45rem;
-  border-radius: .25rem;
-  box-shadow: 0 0.5rem 3rem rgba(16, 185, 129, 0.56);
+  &:hover {
+    width: 25rem;
+    border-radius: .25rem;
+    box-shadow: 0 0.5rem 3rem rgba(16, 185, 129, 0.56);
+  }
+
+  a {
+    white-space: nowrap;
+  }
 }
