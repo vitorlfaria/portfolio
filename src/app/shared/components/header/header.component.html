@@ -1,13 +1,26 @@
-<div class="py-20 px-52 flex items-center justify-between">
-  <!--  <img src="./assets/img/Vitor%20Logo.svg" alt="logo" width="80">-->
-  <app-photo-contacts></app-photo-contacts>
+<nav class="flex items-center justify-between md:justify-center md:flex-col xl:justify-between py-6 px-6">
+  <a href="https://github.com/vitorlfaria" target="_blank"
+     class="text-emerald-500 font-bold hover:text-emerald-400 md:pb-6">
+    &#60;Vitor Lacerda &#8725;&#62;
+  </a>
 
-  <ul class="flex items-center gap-12">
-    <li class="cursor-pointer font-bold text-emerald-500 hover:text-emerald-400">Home</li>
-    <li class="cursor-pointer hover:text-emerald-400">Summary</li>
-    <li class="cursor-pointer hover:text-emerald-400">Skills</li>
-    <li class="cursor-pointer hover:text-emerald-400">Projects</li>
-    <li class="cursor-pointer hover:text-emerald-400">Education</li>
-    <li class="cursor-pointer hover:text-emerald-400">Blog</li>
-  </ul>
-</div>
+  <div class="cursor-pointer md:hidden" (click)="toggleNavbar()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <div [ngClass]="open ? 'open' : ''"
+       class="opacity-0 pointer-events-none absolute top-2 right-2 text-emerald-950 bg-emerald-50 pl-10 pe-24 pb-10 pt-20 rounded-lg z-50
+              md:relative md:opacity-100 md:p-0 md:bg-transparent md:text-emerald-50 md:pointer-events-auto">
+    <div (click)="toggleNavbar()" class="cursor-pointer absolute top-3 right-4 text-xl md:hidden">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul class="flex flex-col -right-2 gap-12 md:flex-row">
+      <li class="cursor-pointer font-bold text-emerald-500 hover:text-emerald-400">Home</li>
+      <li class="cursor-pointer hover:text-emerald-400">Summary</li>
+      <li class="cursor-pointer hover:text-emerald-400">Skills</li>
+      <li class="cursor-pointer hover:text-emerald-400">Projects</li>
+      <li class="cursor-pointer hover:text-emerald-400">Education</li>
+      <li class="cursor-pointer hover:text-emerald-400">Blog</li>
+    </ul>
+  </div>
+</nav>
